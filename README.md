@@ -21,7 +21,7 @@
 
 2. Клонируйте репозиторий на свой компьютер:
 ```bash
-gh repo clone jkandrashina/petproject-ws
+git clone git@github.com:jkandrashina/petproject-ws.git
 ```
 
 3. Откройте командную строку и перейдите в папку petproject-ws:
