@@ -1,0 +1,37 @@
+{% extends "waddensea/base.html" %}
+
+{# Title #}
+{% block title %}Регионы Ваттового моря{% endblock %}
+
+{% block header %}
+    <header class="ws-header regions-bg d-flex justify-content-end align-items-end">
+      <div class="header-title text-white">    
+        <h1 class="display-2">Регионы</h1>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <main class="container cards-container">
+      <h2 class="mb-5 text-center">Регионы Ваттового моря</h2>
+      <div class="catalogue-cards m-auto">
+        {% for r in regions %}
+        <div class="card border-0 mx-md-5">
+          <a href="{{ r.get_absolute_url }}">
+            <div class="row p-md-5 p-4">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4 class="card-title">{{ r.name }}</h4>
+                  <p class="card-text d-md-block d-none">{{ r.short_desc }}</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="{{ r.image.url }}" class="img-fluid rounded" alt="Регион {{ r.name }}">
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+{% endblock %}

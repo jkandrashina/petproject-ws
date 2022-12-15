@@ -1,0 +1,69 @@
+{% extends "waddensea/base.html" %}
+
+{# Title #}
+{% block title %}{{ spc.name }}{% endblock %}
+
+{% block header %}
+    <header class="ws-header {{ spc.category.slug }}-bg d-flex justify-content-end align-items-end">
+      <div class="header-title text-white">    
+        <h1 class="display-2">{{ spc.category.name }}</h1>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <main class="container mb-5">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-9">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'species' %}">Обитатели</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="{{ spc.category.get_absolute_url }}">{{ spc.category.name }}</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                {{ spc.name }}
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <h2 class="mb-5 text-center display-5">{{ spc.name }}</h2>
+      <div class="row justify-content-center align-items-center mb-5">
+        <div class="col-md-6 col-10 mb-4 mb-md-3">
+          <p class="latin-name">Latin: {{ spc.latin_name }}</p>
+          <p class="short-desc">{{ spc.short_desc|safe }}</p>
+        </div>
+        <div class="col-md-3 col-10">
+          <img src="{{ spc.image.url }}" class="img-fluid">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-10">
+          {{ spc.desc|safe }}
+        </div>
+      </div>
+    </main>
+{% endblock %}    
+    <!-- Footer -->
+    <div class="container">
+      <footer class="pt-4 pb-3 my-4 border-top">
+        <ul class="nav justify-content-center pb-3 mb-2">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">Регионы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">Обитатели</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">© 2022. Все права на текст и фотографии принадлежат сайту <a href="https://www.nationalpark-wattenmeer.de/" title="Сайт национальных парков Ваттового моря">nationalpark-wattenmeer.de</a></p>
+      </footer>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

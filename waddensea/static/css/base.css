@@ -1,0 +1,128 @@
+/* Headers */
+.ws-header {
+  background-repeat: no-repeat;
+  background-position: 80% 80%;
+  background-size: cover;
+  height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .ws-header {
+    background-position: 50% 80%; 
+    height: 70vh;
+  }
+}
+
+.ws-header.home-bg {
+  background-image: url(../images/home_header.jpg);
+}
+
+.ws-header.regions-bg {
+  background-image: url(../images/regions_header.jpg);
+}
+
+.ws-header.schleswig-holstein-bg {
+  background-image: url(../images/schleswig_holstein_header.jpg);
+}
+
+.ws-header.hamburg-bg {
+  background-image: url(../images/hamburg_header.jpg);
+}
+
+.ws-header.lower-saxony-bg {
+  background-image: url(../images/lower_saxony_header.jpg);
+}
+
+.ws-header.species-bg {
+  background-image: url(../images/species_header.jpg);
+}
+
+.ws-header.animals-bg {
+  background-image: url(../images/animals_header.jpg);
+}
+
+.ws-header.birds-bg {
+  background-image: url(../images/birds_header.jpg);
+}
+
+.ws-header.fish-bg {
+  background-image: url(../images/lower_saxony_header.jpg);
+}
+
+.header-title {
+  padding: 0 5rem 2.5rem 3rem;
+}
+
+
+/* Navbar in Header*/
+.navbar {
+  background: #f0f2f4;
+  margin-bottom: 6.5rem;
+}
+.navbar .nav-link {
+  color: #000;
+  font-size: 1.2rem;
+}
+.navbar .nav-link:hover,
+  footer .nav-link:hover {
+  color: var(--bs-link-color);
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+.navbar .navbar-nav {
+  column-gap: 2rem;
+}
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+  footer .nav-link {
+  color: #6c757d;
+}
+
+/* Short Description */
+.short-desc,
+.latin-name {
+  font-size: 1.35rem;
+}
+
+
+/* Main content */
+main p,
+main ol li,
+main ul li {
+  font-size: 1.2rem;
+}
+
+.latin-name {
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+/* Catalogue */
+.cards-container .card-body {
+  padding: 0 4.5rem 0 0;
+}
+
+.cards-container .card-text {
+  font-size: 1.15rem;
+}
+
+.cards-container a {
+  color: inherit;
+  text-decoration: none;
+}
+.cards-container a:hover {
+  background: #f0f2f4;
+}
+
+.catalogue-cards {
+  max-width: 1072px;
+}
+
+/* Category page */
+.category {
+  margin-bottom: 5.5rem;
+}

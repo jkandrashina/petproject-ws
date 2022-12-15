@@ -1,0 +1,38 @@
+{% extends "waddensea/base.html" %}
+
+
+{% block content %}
+    <main class="container text-center">
+      <h2 class="mb-5">Регионы Ваттового моря</h2>
+      <div class="row justify-content-center category">
+        {% for r in regions %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          <a href="{{ r.get_absolute_url }}" class="card-link">
+            <div class="card h-100">
+              <img src="{{ r.image.url }}" class="card-img-top" alt="Национальный парк региона {{ r.name }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ r.name }}</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Обитатели Ваттового моря -->
+      <h2 class="mb-5">Обитатели Ваттового моря</h2>
+      <div class="row justify-content-center category">
+        {% for cat in categories %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          <a href="{{ cat.get_absolute_url }}" class="card-link">
+            <div class="card h-100">
+              <img src="{{ cat.image.url }}" class="card-img-top" alt="{{ cat.name }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ cat.name }}</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+{% endblock %}
