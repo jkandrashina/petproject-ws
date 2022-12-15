@@ -30,6 +30,7 @@ cd petproject-ws
 ```
 
 4. Создайте в ней виртуальное окружение:
+
 Linux
 ```bash
 python3 -m venv venv
@@ -40,6 +41,7 @@ python -m venv venv
 ```
 
 5. Активируйте виртуальное окружение, выполнив команду:
+
 Linux
 ```bash
 source venv/bin/activate
@@ -50,6 +52,7 @@ venv\scripts\activate
 ```
 
 6. Установите необходимые библиотеки, прочитав их список из файла:
+
 Linux
 ```bash
 (venv) ~$ pip install -r requirements.txt
@@ -60,6 +63,7 @@ Windows
 ```
 
 7. Запустите виртуальный сервер:
+
 Linux / Windows
 ```bash
 python manage.py runserver
